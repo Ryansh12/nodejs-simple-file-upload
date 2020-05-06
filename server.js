@@ -1,6 +1,7 @@
 var express = require('express');
 var multer  = require('multer');
 var fs  = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -31,4 +32,4 @@ app.post('/upload', function (req, res, next) {
     });
 })
 
-app.listen(3000);
+app.listen(port);
